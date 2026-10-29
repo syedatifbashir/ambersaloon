@@ -86,3 +86,19 @@
    - Outlined steps to verify deployment status at `vercel.com/dashboard` under the **Deployments** tab.
    - Provided instructions for performing a manual redeploy if necessary.
    - Clarified that the previous domain remains assigned to the project and requires no re-configuration.
+
+---
+
+### User Request 7:
+> *"mean tell me now th resporitory ispublic so how to make it mean if i make i private then it will be connected with eh vercel or not so nobody can see it as well on github"*
+
+#### Analysis & Clarifications:
+1. **Will Vercel still work if the GitHub repo is made Private?**:
+   - **YES, 100%**. Vercel connects via authorized GitHub integration (OAuth / GitHub App) and has full access to deploy private repositories.
+   - The live website on Vercel remains publicly visible to customers, while your code, assets, and commit history on GitHub become completely hidden from the public.
+   - Automatic deployments on `git push` continue to work seamlessly.
+2. **Step-by-Step Instructions to Make Repo Private**:
+   - Navigate to `https://github.com/syedatifbashir/ambersaloon/settings`.
+   - Scroll to the bottom to the **Danger Zone**.
+   - Click **Change repository visibility** -> **Change to private**.
+   - Confirm by typing repository name.
