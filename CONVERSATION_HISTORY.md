@@ -24,3 +24,18 @@
 3. Added remote origin: `https://github.com/syedatifbashir/ambersaloon.git`.
 4. Staged and committed all core website files, pages, assets, and configurations.
 5. Pushed `main` branch to GitHub remote repository `https://github.com/syedatifbashir/ambersaloon`.
+
+---
+
+### User Request 3:
+> *"what to do here"* (attached Vercel project configuration screenshot)
+
+#### Analysis & Actions Taken:
+1. Inspected Vercel screenshot:
+   - Repository: `syedatifbashir/ambersaloon` (main)
+   - Project Name: `ambersaloon`
+   - Root Directory: `./` (Correct)
+   - Application Preset: `Other` (Correct)
+2. Verified that all defaults are 100% correct and no extra settings or environment variables are needed.
+3. Advised user to click the black **Deploy** button.
+
