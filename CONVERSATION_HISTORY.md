@@ -71,3 +71,18 @@
    - Replaced previous repository content with this new `saloon 0002` package.
    - Preserved full conversation history in `CONVERSATION_HISTORY.md` per user directive.
    - Successfully pushed updated package to `main` branch on GitHub, automatically triggering new live deployment on Vercel.
+
+
+---
+
+### User Request 6:
+> *"how ot deploy it on teh vercel now on teh rprevious domain"*
+
+#### Analysis & Guidance Provided:
+1. **Automatic Deployment Mechanism**:
+   - Because the Vercel project `ambersaloon` is connected directly to `syedatifbashir/ambersaloon` on branch `main`, the recent push (`commit 91cf2a7`) automatically triggers an instant rebuild and live deployment on Vercel.
+   - The existing production domain (e.g., `ambersaloon.vercel.app` or linked custom domain) automatically serves the new files without needing a separate project creation.
+2. **Verification & Manual Redeployment Steps**:
+   - Outlined steps to verify deployment status at `vercel.com/dashboard` under the **Deployments** tab.
+   - Provided instructions for performing a manual redeploy if necessary.
+   - Clarified that the previous domain remains assigned to the project and requires no re-configuration.
