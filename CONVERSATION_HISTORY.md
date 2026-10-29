@@ -39,3 +39,16 @@
 2. Verified that all defaults are 100% correct and no extra settings or environment variables are needed.
 3. Advised user to click the black **Deploy** button.
 
+---
+
+### User Request 4:
+> *"how i can connec teh pixel on this one wesbite whic ibhavedeployed o vercel"*
+
+#### Analysis & Actions Taken:
+1. Identified tracking requirements for salon website (Meta / Facebook & Instagram Pixel, plus optional TikTok / Google Tag).
+2. Prepared implementation architecture:
+   - Base Pixel Code in `<head>` of both `index.html` and `prices.html` for `PageView` tracking.
+   - High-value conversion tracking on WhatsApp booking form submission (`Lead` / `Contact` event).
+   - Price catalogue exploration tracking (`ViewContent` / `Search` event).
+3. Provided step-by-step instructions and offered to inject the user's Pixel ID directly into Git and push live to Vercel automatically.
+
