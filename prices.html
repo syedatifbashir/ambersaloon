@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Price Catalogue (314 Options) | Amber's Salon Lahore</title>
+  <meta name="description" content="Explore the full 2026 pricing catalogue of Amber's Salon DHA Phase 6 Lahore. 314 authentic priced options across 13 service categories with instant search.">
+  <link rel="icon" type="image/png" href="assets/img/ambers-logo.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/refined.css">
+</head>
+<body data-page="prices">
+
+  <!-- Top Strip -->
+  <div class="topstrip">
+    <div class="container">
+      <div>CCA-109, DHA Phase 6, Lahore &bull; Daily 11:00 AM &ndash; 8:00 PM</div>
+      <div class="secondary">
+        Direct Appointments: <a href="tel:03014398287">0301-4398287</a> &bull;
+        <a href="https://wa.me/923014398287" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="header">
+    <div class="container navwrap">
+      <a href="index.html" class="logoanchor" aria-label="Amber's Salon Home">
+        <img src="assets/img/ambers-logo.png" alt="Amber's Salon Logo" class="brandlogo" width="63" height="63">
+        <div class="wordbrand">
+          Amber's
+          <small>Salon &bull; DHA Lahore</small>
+        </div>
+      </a>
+
+      <button id="mobileToggle" class="mobiletoggle" aria-expanded="false" aria-label="Open navigation menu" type="button">&#9776;</button>
+
+      <nav id="mainnav" class="mainnav" aria-label="Main Navigation">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="prices.html" data-page="prices" class="nav-price-link" aria-current="page">Price Catalogue</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#visit">Contact &amp; Location</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="btn dark navcta" type="button" data-book data-service="General Consultation">Book Now</button>
+        <button id="shareBtn" class="icon-btn" aria-label="Share website" type="button" title="Share Website">&#10138;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Price Hero Section -->
+  <section class="pricehero">
+    <div class="container">
+      <div class="pricehero-layout">
+        <div class="pricehero-content">
+          <span class="eyebrow">Complete Salon Menu &bull; October 2026</span>
+          <h1 class="serif">Every Service, <em>Clear Pricing</em></h1>
+          <p>
+            Browse all 314 authentic service options with complete rate transparency. Filter by category, 
+            search specific treatments, or enquire directly with our front desk team.
+          </p>
+
+          <div class="pricehero-actions">
+            <a href="#catalog-start" class="btn pricehero-button">Explore Catalogue &darr;</a>
+            <button type="button" class="btn print-menu-button" onclick="window.print()">Print Rate Card &#128438;</button>
+          </div>
+
+          <div class="menu-metrics">
+            <div>
+              <strong>13</strong>
+              <span>Categories</span>
+            </div>
+            <div>
+              <strong>314</strong>
+              <span>Priced Options</span>
+            </div>
+            <div>
+              <strong>PKR</strong>
+              <span>Official Salon Rates</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Menu Preview Card -->
+        <div class="hero-menu-card">
+          <div class="hero-card-upper">
+            <span>OFFICIAL RATE CARD</span>
+            <span>&#10038;</span>
+          </div>
+          <h2 class="serif">Amber's <em>Menu</em></h2>
+          <p>Carefully compiled and formatted for convenient online browsing.</p>
+
+          <div class="mini-price-lines">
+            <div>
+              <span>Head Massage (30 mins)</span>
+              <b>PKR 3,500</b>
+            </div>
+            <div>
+              <span>Signature HydraFacial</span>
+              <b>PKR 8,000+</b>
+            </div>
+            <div>
+              <span>Classic Spa Pedicure</span>
+              <b>PKR 3,500</b>
+            </div>
+          </div>
+
+          <div class="hero-card-foot">
+            <span>CCA-109 DHA Phase 6</span>
+            <span>&#10022;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Catalogue Layout with Sticky Sidebar & Dynamic Results -->
+  <div class="container">
+    <div class="catalog-wrap" id="catalog-start">
+      <!-- Aside Category Navigation -->
+      <aside class="catalog-nav" aria-label="Category Filter">
+        <div class="menu-aside-title">
+          <span class="eyebrow">Directory</span>
+          <h2 class="serif">Categories</h2>
+          <p>Select any category to filter the catalog instantly.</p>
+        </div>
+
+        <div id="categoryFilterList" class="category-filter-list">
+          <!-- Dynamically populated by assets/prices.js -->
+        </div>
+
+        <div class="aside-help">
+          Need custom bridal consultation or group bookings?
+          <a href="https://wa.me/923014398287" target="_blank" rel="noopener">Chat on WhatsApp &rarr;</a>
+        </div>
+      </aside>
+
+      <!-- Results Column -->
+      <main class="catalog-results-column">
+        <!-- Sticky Search & Filter Bar -->
+        <div class="catalog-tools">
+          <div class="catalog-topline">
+            <div>
+              <span class="eyebrow">Price Directory</span>
+              <h2 class="serif">All Salon <em>Services</em></h2>
+            </div>
+            <div class="catalog-list-note">Updated October 2026</div>
+          </div>
+
+          <div class="bar">
+            <div class="catalog-search-wrap">
+              <span>&#128269;</span>
+              <input id="priceSearch" type="search" placeholder="Search by name, treatment, or price (e.g. Keratin, Massage, 3,500)..." aria-label="Search prices">
+            </div>
+
+            <select id="priceFilter" class="select" aria-label="Select category">
+              <option value="all">All categories</option>
+              <!-- Options populated by assets/prices.js -->
+            </select>
+
+            <button id="clearSearch" class="clear-button" type="button">Reset</button>
+          </div>
+
+          <div id="resultsCount" class="results-summary" aria-live="polite">Loading services...</div>
+        </div>
+
+        <!-- Rendered Catalog Content Container -->
+        <div id="catalog">
+          <!-- Populated dynamically by assets/prices.js -->
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="price-disclaimer">
+          <strong>Important Salon Notice:</strong> All pricing is transcribed directly from the salon price list. 
+          Prices are subject to consultation and may vary depending on hair length, density, condition, or customized requests. 
+          Please confirm exact details with the salon prior to service.
+        </div>
+
+        <!-- Quick Booking CTA Card -->
+        <div class="catalog-bottom-book">
+          <div>
+            <span class="eyebrow">Need Assistance?</span>
+            <h3 class="serif">Ready to Book an Appointment?</h3>
+            <p>Our front desk reception is available daily from 11:00 AM to 8:00 PM for custom bookings and enquiries.</p>
+          </div>
+          <a href="https://wa.me/923014398287" target="_blank" rel="noopener" class="btn dark">WhatsApp Reception &rarr;</a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="footbrand">
+            <img src="assets/img/ambers-logo.png" alt="Amber's Salon" width="68" height="68">
+            <span class="serif">Amber's Salon</span>
+          </div>
+          <p style="margin-top: 15px; max-width: 440px;">
+            A sanctuary of bespoke beauty, refined hair artistry, and holistic wellbeing in DHA Phase 6, Lahore.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com/ambersalon.official/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">&#9830;</a>
+            <a href="https://wa.me/923014398287" target="_blank" rel="noopener" aria-label="WhatsApp">&#128172;</a>
+            <a href="tel:03014398287" aria-label="Call Us">&#128222;</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footlinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="prices.html">Price Catalogue (314 Items)</a>
+            <a href="index.html#gallery">Client Gallery</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#visit">Location &amp; Hours</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Salon Details</h4>
+          <div class="footlinks">
+            <span>CCA-109 DHA Phase 6, Lahore</span>
+            <span>Daily: 11:00 AM &ndash; 8:00 PM</span>
+            <a href="tel:03014398287">0301-4398287</a>
+            <a href="https://wa.me/923014398287" target="_blank" rel="noopener">WhatsApp Support</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>&copy; <span id="year">2026</span> Amber's Salon &bull; All Rights Reserved.</div>
+        <div>CCA-109 DHA Phase 6, Lahore &bull; Designed for Elegance &amp; Accessibility</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/923014398287" class="floatwa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp Appointment">
+    &#128172;
+  </a>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close" type="button" aria-label="Close dialog">&times;</button>
+      <span class="eyebrow">Appointment Request</span>
+      <h2 id="modalTitle" class="serif">Book a Service</h2>
+      <p>Fill out the details below. This will open WhatsApp with your pre-formatted appointment request directly to the salon.</p>
+
+      <form id="bookingForm" style="margin-top: 20px;">
+        <div class="field">
+          <label for="bName">Your Name *</label>
+          <input id="bName" class="input" type="text" required placeholder="Full Name">
+        </div>
+
+        <div class="field">
+          <label for="bService">Selected Service *</label>
+          <input id="bService" class="input" type="text" required placeholder="Service name">
+        </div>
+
+        <div class="field">
+          <label for="bDate">Preferred Date *</label>
+          <input id="bDate" class="input" type="date" required>
+        </div>
+
+        <div class="field">
+          <label for="bTime">Preferred Time *</label>
+          <select id="bTime" class="select" required>
+            <option value="">Select a time slot</option>
+            <option value="11:30 AM">11:30 AM</option>
+            <option value="12:30 PM">12:30 PM</option>
+            <option value="02:00 PM">02:00 PM</option>
+            <option value="03:30 PM">03:30 PM</option>
+            <option value="05:00 PM">05:00 PM</option>
+            <option value="06:30 PM">06:30 PM</option>
+            <option value="07:30 PM">07:30 PM</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="bNote">Special Requests or Notes (Optional)</label>
+          <textarea id="bNote" class="textarea" rows="2" placeholder="e.g. hair length, specific stylist, bridal consultation..."></textarea>
+        </div>
+
+        <button type="submit" class="btn dark" style="margin-top: 10px;">Proceed via WhatsApp &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Share Toast -->
+  <div id="shareToast" class="share-note" hidden role="status"></div>
+
+  <!-- Scripts -->
+  <script src="assets/prices-data.js"></script>
+  <script src="assets/site.js"></script>
+  <script src="assets/prices.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {"file":"hero.jpg","description":"Salon interiors","source":"https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=85"},
+  {"file":"hair.jpg","description":"Hair styling","source":"https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1100&q=82"},
+  {"file":"makeup.jpg","description":"Makeup artistry","source":"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1100&q=82"},
+  {"file":"skin.jpg","description":"Skincare","source":"https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1100&q=82"},
+  {"file":"nails.jpg","description":"Nail services","source":"https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1100&q=82"},
+  {"file":"bridal.jpg","description":"Bridal beauty","source":"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=82"},
+  {"file":"spa.jpg","description":"Spa and massage","source":"https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=1100&q=82"},
+  {"file":"academy.jpg","description":"Beauty training","source":"https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1100&q=82"}
+]
