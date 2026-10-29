@@ -52,3 +52,22 @@
    - Price catalogue exploration tracking (`ViewContent` / `Search` event).
 3. Provided step-by-step instructions and offered to inject the user's Pixel ID directly into Git and push live to Vercel automatically.
 
+---
+
+### User Request 5:
+> *"i want it to deplor on teh github wiht hsi one repository and replcae adn delete teh previous one adn put these one there https://github.com/syedatifbashir/ambersaloon"*
+
+#### Analysis & Actions Taken:
+1. **Source Package Inspection**:
+   - User provided a new updated package folder `saloon 0002` containing updated `index.html`, `prices.html`, CSS, JS, and stock assets.
+   - Confirmed complete structure: responsive home page, full 314-item price list across 13 categories, WhatsApp modal booking integration, client reviews system, and salon contact info.
+2. **Asset Enhancement**:
+   - Successfully downloaded and bundled all 8 self-hosted high-resolution Unsplash stock photographs directly into `assets/stock/` (`hero.jpg`, `hair.jpg`, `makeup.jpg`, `skin.jpg`, `nails.jpg`, `bridal.jpg`, `spa.jpg`, `academy.jpg`).
+   - Bundled `vercel.json` for seamless Vercel production hosting with clean URL rewrites and asset caching.
+   - Added standard `.gitignore`.
+3. **Repository Replacement & Sync**:
+   - Initialized Git in `saloon 0002`.
+   - Connected remote `https://github.com/syedatifbashir/ambersaloon.git`.
+   - Replaced previous repository content with this new `saloon 0002` package.
+   - Preserved full conversation history in `CONVERSATION_HISTORY.md` per user directive.
+   - Successfully pushed updated package to `main` branch on GitHub, automatically triggering new live deployment on Vercel.
