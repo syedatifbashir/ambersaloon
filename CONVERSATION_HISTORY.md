@@ -244,3 +244,22 @@
    - Edge CDN caching (`public, max-age=31536000, immutable`).
    - Lightweight poster image preview (instant <100ms display).
    - `preload="metadata"` and smooth scroll-in streaming to prevent buffering.
+
+---
+
+### User Request 15:
+> *"i have pasted the videos now according ot eh color make a carousle add that onein this area add these videos before teh 01 section properly with direct adbn wuickly video shows properly"* (attached screenshot)
+
+#### Actions Taken:
+- Added `.highlights-section` carousel before section 01 with 10 review reel cards, audio controls, and snapping scroll.
+
+---
+
+### User Request 16:
+> *"undo the previous step"*
+
+#### Actions Taken:
+- Reverted commit `8c4d82f` via `git revert 8c4d82f`.
+- Restored `index.html`, `assets/refined.css`, and `assets/site.js` back to their state prior to the video carousel insertion.
+- Safely created a backup of the user's 10 downloaded review video files in `$env:TEMP\saloon_videos_backup\` so no media is lost.
+- Pushed the revert to `origin/main` on GitHub to sync Vercel production deployment.
