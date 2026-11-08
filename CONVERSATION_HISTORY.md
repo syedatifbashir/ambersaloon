@@ -231,3 +231,16 @@
 4. **Integration Workflow**:
    - Save the downloaded `.mp4` video files into `saloon 0002\assets\videos\`.
    - Assistant will automatically build the responsive video review reel section with lazy playback, commit to Git, and push live to Vercel.
+
+---
+
+### User Request 14:
+> *"in which folder i have to paste the videos properly for clear and quickly loading as well show in 1 sec"*
+
+#### Actions & Instructions Provided:
+1. Created dedicated directory: `assets\videos\` (`c:\Users\Atif\Downloads\saloon 0002\assets\videos\`).
+2. Added `README.txt` with naming conventions (`review-01.mp4`, `review-02.mp4`, etc.).
+3. Clarified 1-second load performance architecture:
+   - Edge CDN caching (`public, max-age=31536000, immutable`).
+   - Lightweight poster image preview (instant <100ms display).
+   - `preload="metadata"` and smooth scroll-in streaming to prevent buffering.
