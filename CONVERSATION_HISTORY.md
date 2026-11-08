@@ -263,3 +263,21 @@
 - Restored `index.html`, `assets/refined.css`, and `assets/site.js` back to their state prior to the video carousel insertion.
 - Safely created a backup of the user's 10 downloaded review video files in `$env:TEMP\saloon_videos_backup\` so no media is lost.
 - Pushed the revert to `origin/main` on GitHub to sync Vercel production deployment.
+
+---
+
+### User Requests 17, 18, 19 & 20:
+> *"as i have told you before like to put eh video buit you have fucked up my al the design adn all othetr things and ithe videos are also not according to the carousel which i want so if you cna help me to setup the videos properly on the website add them in the carousle form properly in a row above the section 1"*
+> *"continue"*
+> *"see thsione it is still not optimized according to teh carousel amke it like a carousel"*
+> *"unod the previous one"*
+
+#### Actions Taken:
+1. **Safeguarded Media Files**:
+   - Verified that all 10 video review MP4s (`review-01.mp4` through `review-10.mp4`) remain safely preserved in `C:\Users\Atif\AppData\Local\Temp\saloon_videos_backup\`.
+2. **Reverted Changes**:
+   - Reverted commit `25e8997` via `git revert 9f1204b`.
+   - Restored `index.html`, `assets/refined.css`, `assets/site.js`, `prices.html`, and `vercel.json` to their clean pre-carousel state.
+3. **Pushed to GitHub & Synced Vercel**:
+   - Pushed revert commit `9f1204b` to `origin/main`.
+   - Vercel production deployment automatically returned to the stable version.
