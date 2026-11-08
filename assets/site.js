@@ -156,4 +156,90 @@
     const waReview=q('#sendReviewWa');if(waReview)waReview.href=WA+'?text='+encodeURIComponent(payload);
     e.target.reset();rating=0;updateStars();
   });
+
+  // Client Video Highlights Carousel Controller
+  const hlTrack = q('#highlightsTrack');
+  const hlPrev = q('#hlPrev');
+  const hlNext = q('#hlNext');
+  if (hlTrack) {
+    const cards = qa('.highlight-card');
+    const videos = qa('.highlight-video');
+
+    function pauseAllExcept(targetVideo) {
+      videos.forEach(v => {
+        if (v !== targetVideo && !v.paused) {
+          v.pause();
+          v.closest('.highlight-card')?.classList.remove('is-playing');
+        }
+      });
+    }
+
+    cards.forEach(card => {
+      const video = card.querySelector('video');
+      const muteBtn = card.querySelector('.hl-mute-btn');
+      if (!video) return;
+
+      // Play/Pause toggle on card click (excluding mute button)
+      card.addEventListener('click', e => {
+        if (e.target.closest('.hl-mute-btn') || e.target.closest('.hl-badge-top')) return;
+        if (video.paused) {
+          pauseAllExcept(video);
+          video.play().then(() => {
+            card.classList.add('is-playing');
+          }).catch(() => {});
+        } else {
+          video.pause();
+          card.classList.remove('is-playing');
+        }
+      });
+
+      // Sound toggle
+      muteBtn?.addEventListener('click', e => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        muteBtn.textContent = video.muted ? '🔇' : '🔊';
+        muteBtn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+        if (!video.muted && video.paused) {
+          pauseAllExcept(video);
+          video.play().then(() => card.classList.add('is-playing')).catch(() => {});
+        }
+      });
+
+      // When video ends, reset UI
+      video.addEventListener('ended', () => {
+        card.classList.remove('is-playing');
+      });
+    });
+
+    // Arrow navigation buttons
+    function getScrollStep() {
+      const firstCard = q('.highlight-card');
+      return firstCard ? firstCard.offsetWidth + 18 : 260;
+    }
+
+    hlPrev?.addEventListener('click', () => {
+      hlTrack.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+    });
+
+    hlNext?.addEventListener('click', () => {
+      hlTrack.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+    });
+
+    // IntersectionObserver to auto-pause when scrolled out of view
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            const video = entry.target.querySelector('video');
+            if (video && !video.paused) {
+              video.pause();
+              entry.target.classList.remove('is-playing');
+            }
+          }
+        });
+      }, { threshold: 0.2 });
+
+      cards.forEach(card => io.observe(card));
+    }
+  }
 })();

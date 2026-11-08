@@ -244,3 +244,25 @@
    - Edge CDN caching (`public, max-age=31536000, immutable`).
    - Lightweight poster image preview (instant <100ms display).
    - `preload="metadata"` and smooth scroll-in streaming to prevent buffering.
+
+---
+
+### User Request 15:
+> *"i have pasted the videos now according ot eh color make a carousle add that onein this area add these videos before teh 01 section properly with direct adbn wuickly video shows properly"* (attached screenshot showing the region between the ticker and 01 section)
+
+#### Implementation & Architecture:
+1. **Video File Preparation & Optimization**:
+   - Renamed user's 10 review video files into URL-safe formats: `review-01.mp4` through `review-10.mp4` in `assets/videos/`.
+   - Used HTML5 `<video playsinline muted loop preload="metadata">` with `#t=0.001` deep-link frames for instantaneous 1st-frame rendering on mobile (iOS/Android) and desktop in <0.5 seconds without downloading the full files upfront.
+2. **Carousel Placement & Section Design (Before Section 01)**:
+   - Positioned the section `#client-highlights` immediately after the hero animated ticker bar and directly before `01 / Explore the salon`, matching the user's uploaded screenshot.
+   - Styled using Amber's Salon refined palette (Midnight Plum `--plum: #302539`, Dusty Rose `--rose: #79546d`, Warm Champagne Gold `--gold: #b58b64`, Soft Off-White `--off: #f8f1f4`).
+   - Built 10 vertical 9:16 Instagram Reel style cards with glassmorphic badges (`Amber's Client`), centered play/pause controls, gradient caption overlays, and audio mute/unmute buttons.
+3. **Interactive Carousel & Video Controls (`assets/site.js`)**:
+   - Added smooth horizontal scroll snapping (`scroll-snap-type: x mandatory`).
+   - Integrated previous (`←`) and next (`→`) arrow buttons with dynamic scroll steps.
+   - Implemented single-active video audio playback (tapping/playing one video automatically pauses others to avoid overlapping sound).
+   - Added `IntersectionObserver` to automatically pause videos when scrolled out of view, saving battery and bandwidth.
+4. **Git Sync & Deployment**:
+   - Staged all 10 video files and code changes.
+   - Committed and pushed to `main` on GitHub to trigger live production deployment on Vercel.
