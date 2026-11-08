@@ -213,3 +213,21 @@
 
 #### Response & Capabilities Confirmed:
 - Confirmed full capability to receive video files or download links, organize them in `assets/videos/`, generate/link cover thumbnails, integrate them into `index.html` with responsive reels UI and lazy autoplay, and commit/push directly to GitHub for automatic Vercel deployment.
+
+---
+
+### User Request 13:
+> *"i want ot fecth thierreviews video on hihglights how i can so uou cna put here as well"*
+
+#### Guidance & Step-by-Step Instructions Provided:
+1. **Explanation of Instagram Restrictions**:
+   - Instagram Highlights require authentication/session access, preventing direct automated scraping without triggering anti-bot login walls.
+2. **Method 1 (Fastest via Web Downloader — No Login Required)**:
+   - Use free online Highlight downloaders (StorySaver.net, SnapInsta.app, or Save-Insta.com).
+   - Enter username `ambersalon.official`.
+   - Select the "Reviews" / "Client Feedback" highlight and click Download MP4.
+3. **Method 2 (From Instagram App — If Account Admin)**:
+   - Open Highlight on mobile -> tap More (`...`) -> "Save Video" directly to camera roll in HD.
+4. **Integration Workflow**:
+   - Save the downloaded `.mp4` video files into `saloon 0002\assets\videos\`.
+   - Assistant will automatically build the responsive video review reel section with lazy playback, commit to Git, and push live to Vercel.
