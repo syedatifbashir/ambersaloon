@@ -156,3 +156,33 @@
    - Added permanent 301 redirects for `/index`, `/index.html` -> `/`, and `/prices.html` -> `/prices` so no bookmarks or legacy crawlers receive broken links.
 4. **Git Sync & Live Deployment**:
    - Committed changes and pushed to branch `main` on GitHub to auto-trigger immediate Vercel deployment.
+
+---
+
+### User Request 10:
+> *"ok so check all the security chekpoints adn then optimization as well properly so it becomes ready to serve the clients"*
+
+#### Security & Optimization Audit & Enhancements:
+1. **HTTP Security Headers Configured (`vercel.json`)**:
+   - `X-Content-Type-Options: nosniff` (mitigates MIME-type sniffing attacks).
+   - `X-Frame-Options: SAMEORIGIN` (prevents clickjacking via malicious iframe framing).
+   - `X-XSS-Protection: 1; mode=block` (activates legacy browser XSS filters).
+   - `Referrer-Policy: strict-origin-when-cross-origin` (safeguards user paths while preserving Meta & Google analytics attribution).
+   - `Permissions-Policy: camera=(), microphone=(), geolocation=()` (restricts unauthorized device hardware access).
+   - `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload` (enforces HTTPS encryption across modern web clients).
+2. **Tabnabbing & External Link Hardening**:
+   - Audited all external links (Instagram, Google Maps, WhatsApp, phone dials) — confirmed 100% compliance with `rel="noopener noreferrer"` and `target="_blank"`.
+   - Verified JavaScript `window.open` calls explicitly define `noopener,noreferrer`.
+3. **Cross-Site Scripting (XSS) & Input Validation Verification**:
+   - Audited DOM manipulation in `assets/site.js` and `assets/prices.js`: confirmed all dynamic variables use `escapeHTML()` and safe `textContent` setters.
+   - Verified form constraints (`maxlength`, `required`, date bounds) on booking modal and local reviews.
+4. **Rendering & Core Web Vitals Optimization**:
+   - **Eliminated render-blocking CSS `@import`**: Moved Google Fonts (`DM Sans`, `Manrope`, `Playfair Display`) from `@import` in `styles.css` into parallel non-blocking `<link rel="stylesheet">` tags in `<head>`.
+   - **Resource Hints**: Added `preconnect` and `dns-prefetch` for `fonts.googleapis.com`, `fonts.gstatic.com`, `connect.facebook.net`, and `facebook.com`.
+   - **LCP Speedup**: Added `<link rel="preload" as="image" href="assets/stock/hero.jpg" fetchpriority="high" />` for immediate hero image rendering.
+   - **Asset Caching**: Added `public, max-age=31536000, immutable` for static assets and `public, max-age=0, must-revalidate` for clean HTML routing.
+5. **Code Validation & Quality Assurance**:
+   - Ran `node --check` syntax validation across `site.js`, `prices.js`, and `prices-data.js` (100% clean, 0 syntax errors).
+   - Ran JSON validation across `vercel.json` and asset data sources (100% valid).
+6. **Git Sync & Deployment**:
+   - Committed and pushed all enhancements to `main` on GitHub to trigger live production deployment on Vercel.
