@@ -186,3 +186,22 @@
    - Ran JSON validation across `vercel.json` and asset data sources (100% valid).
 6. **Git Sync & Deployment**:
    - Committed and pushed all enhancements to `main` on GitHub to trigger live production deployment on Vercel.
+
+---
+
+### User Request 11:
+> *"tell me i want to put the videos on website from instagram what si teh best way to do that so it loads quickly and show quickly as welll properly"*
+
+#### Architectural Recommendations & Strategy:
+1. **The Problem with Raw Instagram Embeds (`embed.js`)**:
+   - Standard Instagram `<blockquote>` embeds load 2–4 MB of external scripts, trackers, cookie prompts, and stylesheets per embed.
+   - 4 embedded reels will slow the page load by 3–6 seconds on mobile devices and reduce Google PageSpeed scores.
+2. **Strategy A (Recommended — High-Performance Self-Hosted Reels with Poster & Lazy Autoplay)**:
+   - Download the Instagram reel as an optimized MP4 (720p/1080p, compressed to ~1–2 MB).
+   - Generate a lightweight poster image (JPEG/WebP, ~30–50 KB).
+   - Use HTML5 `<video playsinline muted loop preload="none" poster="...">`.
+   - Use an `IntersectionObserver` in JavaScript to only stream/play the video when scrolled into view.
+   - Result: 0ms initial lag, 100 PageSpeed score, smooth TikTok/Reels style looping, with direct link to the Instagram post.
+3. **Strategy B (Click-to-Play Facade / Modal)**:
+   - Display video thumbnail with an Instagram play badge.
+   - When clicked, open a modal with the video or load the embed on demand, keeping initial page load 100% lightweight.
