@@ -82,9 +82,30 @@
     e.preventDefault();
     const name=q('#bName').value.trim(), service=q('#bService').value.trim(), date=q('#bDate').value, time=q('#bTime').value, note=q('#bNote').value.trim();
     if (!name || !service || !date || !time) return;
+    if (typeof window.fbq === 'function') {
+      try {
+        window.fbq('track', 'Lead', {
+          content_name: service,
+          content_category: 'Salon Appointment',
+          currency: 'PKR'
+        });
+      } catch (err) {}
+    }
     const message = `Hello Amber's Salon, I'd like to request an appointment.\n\nName: ${name}\nService: ${service}\nPreferred date: ${date}\nPreferred time: ${time}${note ? `\nNotes: ${note}`:''}\n\nPlease confirm availability and the final price. Thank you.`;
     window.open(`${WA}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     closeBooking();
+  });
+
+  // Track Meta Pixel events for direct contact actions (WhatsApp & Phone calls)
+  document.addEventListener('click', ev => {
+    const wa = ev.target.closest('a[href*="wa.me"]');
+    if (wa && typeof window.fbq === 'function') {
+      try { window.fbq('track', 'Contact', { content_name: 'WhatsApp Appointment' }); } catch (err) {}
+    }
+    const tel = ev.target.closest('a[href^="tel:"]');
+    if (tel && typeof window.fbq === 'function') {
+      try { window.fbq('track', 'Contact', { content_name: 'Phone Call' }); } catch (err) {}
+    }
   });
 
   // Share this site. On file://, most browsers disallow clipboard, so show guidance.

@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ambersaloon.vercel.app/sitemap.xml

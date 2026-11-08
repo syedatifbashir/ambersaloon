@@ -102,3 +102,35 @@
    - Scroll to the bottom to the **Danger Zone**.
    - Click **Change repository visibility** -> **Change to private**.
    - Confirm by typing repository name.
+
+---
+
+### User Request 8:
+> *"i want ot now verify this property in teh google search console so now aadd ths one meta tag in teh header for verification ofthe domain And i am alos giving you the meta pixel as well fo rtracking and connecting of hte pixel so aslo add this one as well so our pixel can connect as welll in there ... and also i want to ad tittle and description as well properly and schemamarkup as well properly so do also properly onpage ad technical seo as well properly and according to the limit of the google for meta tittle adn descripton as well properly"*
+
+#### Implementation & Optimizations Performed:
+1. **Google Search Console Verification Tag**:
+   - Added `<meta name="google-site-verification" content="-9LZehJ832dJO-Ug7aL99XZYXvYyPXOYe5hWjULN-3w" />` to the `<head>` of both `index.html` and `prices.html`.
+2. **Meta Pixel Integration & Event Tracking (Pixel ID: `1819814659252165`)**:
+   - Added the official Meta Pixel snippet with `<noscript>` fallback to `<head>` of both `index.html` and `prices.html` for automatic `PageView` tracking.
+   - Enhanced `assets/site.js` to fire `fbq('track', 'Lead')` upon WhatsApp booking submission with service details.
+   - Enhanced `assets/site.js` to fire `fbq('track', 'Contact')` on direct WhatsApp button and phone call link clicks.
+   - Enhanced `assets/prices.js` to track user catalogue searches (`Search`) and category filters (`ViewContent`).
+3. **Google-Compliant Titles & Meta Descriptions**:
+   - **`index.html` Title**: `Amber's Salon | Hair, Makeup & Beauty | DHA Phase 6 Lahore` (57 characters — within optimal 50–60 character limit).
+   - **`index.html` Meta Description**: `Amber's Salon in DHA Phase 6, Lahore. Premium hair styling, bridal makeup, facials, nails & massage. View price menu & book on WhatsApp: 0301-4398287.` (151 characters — within optimal 140–160 character limit).
+   - **`prices.html` Title**: `Price List & Service Menu | Amber's Salon | DHA Phase 6` (56 characters — within optimal 50–60 character limit).
+   - **`prices.html` Meta Description**: `Official price list for Amber's Salon in DHA Phase 6, Lahore. 300+ transparent rates in PKR for hair, makeup, facials, nails & spa. Book: 0301-4398287.` (153 characters — within optimal 140–160 character limit).
+4. **Rich Schema.org Structured Data (JSON-LD)**:
+   - Configured schema on `index.html` for `BeautySalon`, `HairSalon`, and `WebSite`, with complete address (`CCA-109, DHA Phase 6, Lahore`), geo-coordinates (`31.4720, 74.4420`), opening hours (`11:00 - 20:00`), price range (`PKR 300 - 100,000`), social links, and categorized service catalog.
+   - Configured schema on `prices.html` for `WebPage`, `BreadcrumbList` (`Home > Prices & Menu`), and `BeautySalon`.
+5. **Technical & On-Page SEO Upgrades**:
+   - Added canonical link tags (`<link rel="canonical" href="...">`) to eliminate duplicate content issues.
+   - Added language alternates (`hreflang="en-pk"` and `hreflang="x-default"`).
+   - Added Open Graph (OG) tags (`og:title`, `og:description`, `og:image`, `og:url`, `og:site_name`, `og:locale="en_PK"`, business contact metadata).
+   - Added Twitter Card metadata (`summary_large_image`).
+   - Added local SEO geographic metadata (`geo.region`, `geo.placename`, `geo.position`, `ICBM`).
+   - Created valid XML sitemap at `sitemap.xml` referencing all primary site URLs.
+   - Updated `robots.txt` to index all content and reference the XML sitemap.
+6. **Git & Live Deployment**:
+   - Committed all changes and pushed directly to `origin/main` on GitHub to trigger immediate deployment on Vercel.

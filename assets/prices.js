@@ -56,8 +56,22 @@
     try{history.replaceState(null,'',url);}catch{}
   }
   function clear(focus=true){search.value='';filter.value='all';render();if(focus)search.focus();}
-  search.addEventListener('input',render);
-  filter.addEventListener('change',render);
+  let searchTimer;
+  search.addEventListener('input', () => {
+    render();
+    clearTimeout(searchTimer);
+    if (search.value.trim().length >= 3 && typeof window.fbq === 'function') {
+      searchTimer = setTimeout(() => {
+        try { window.fbq('track', 'Search', { search_string: search.value.trim() }); } catch (err) {}
+      }, 750);
+    }
+  });
+  filter.addEventListener('change', () => {
+    render();
+    if (filter.value !== 'all' && typeof window.fbq === 'function') {
+      try { window.fbq('track', 'ViewContent', { content_name: filter.value, content_category: 'Salon Category' }); } catch (err) {}
+    }
+  });
   document.getElementById('clearSearch').addEventListener('click',()=>clear());
   const url=new URL(location.href);
   const category=url.searchParams.get('category');const q=url.searchParams.get('q');
