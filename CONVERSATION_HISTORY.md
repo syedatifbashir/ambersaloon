@@ -134,3 +134,25 @@
    - Updated `robots.txt` to index all content and reference the XML sitemap.
 6. **Git & Live Deployment**:
    - Committed all changes and pushed directly to `origin/main` on GitHub to trigger immediate deployment on Vercel.
+
+---
+
+### User Request 9:
+> *"no thre sould now be index.html like this one url only clea url like prices and like this one according to that one properly"*
+
+#### Analysis & Actions Taken:
+1. **Clean URL Architecture Implemented**:
+   - Converted all root links from `index.html` to clean `/`.
+   - Converted all price catalogue links and form actions from `prices.html` to clean `/prices`.
+   - Converted all in-page jump links from `index.html#section` to clean `/#section`.
+   - Converted all category links from `prices.html?category=...` to clean `/prices?category=...`.
+2. **SEO & Metadata Canonical Alignment**:
+   - Updated canonical URLs on both pages to clean paths: `https://ambersaloon.vercel.app/` and `https://ambersaloon.vercel.app/prices`.
+   - Updated Open Graph (`og:url`) and Twitter Card (`twitter:url`) tags to point to `/` and `/prices`.
+   - Updated Schema.org structured data breadcrumbs, webpage IDs, and catalog URLs to clean `/prices` endpoints.
+   - Updated `sitemap.xml` with clean URL entries: `https://ambersaloon.vercel.app/` and `https://ambersaloon.vercel.app/prices`.
+3. **Vercel Server Routing & 301 Permanent Redirects**:
+   - Configured `vercel.json` with `"cleanUrls": true`, `"trailingSlash": false`.
+   - Added permanent 301 redirects for `/index`, `/index.html` -> `/`, and `/prices.html` -> `/prices` so no bookmarks or legacy crawlers receive broken links.
+4. **Git Sync & Live Deployment**:
+   - Committed changes and pushed to branch `main` on GitHub to auto-trigger immediate Vercel deployment.
