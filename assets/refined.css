@@ -265,3 +265,167 @@ body[data-page=prices]{background:#fbfaf8}
   .category-filter-list{width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain}
   .catalog-tools,.catalog-topline,.catalog-tools .bar,.catalog-search-wrap,#catalog{min-width:0;max-width:100%}
 }
+
+/* ==========================================================
+   Client Review Video Carousel (Scoped: .vc-*)
+   ========================================================== */
+.vc-section {
+  background: #fbf7f4;
+  border-bottom: 1px solid var(--line);
+  padding: 56px 0 64px;
+  position: relative;
+}
+.vc-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.vc-head h2 {
+  font-size: clamp(34px, 4.2vw, 54px);
+  margin: 10px 0 0;
+  color: var(--ink);
+}
+.vc-head h2 em {
+  color: var(--rose);
+  font-style: italic;
+}
+.vc-nav-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.vc-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--plum);
+  font-size: 24px;
+  line-height: 1;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all .2s ease;
+  user-select: none;
+  padding: 0;
+}
+.vc-nav-btn:hover {
+  background: var(--plum);
+  color: #fff;
+  border-color: var(--plum);
+  transform: translateY(-1px);
+}
+.vc-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px 4px 18px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.vc-track::-webkit-scrollbar {
+  display: none;
+}
+.vc-card {
+  flex: 0 0 215px;
+  width: 215px;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  background: #2b2531;
+  scroll-snap-align: start;
+  box-shadow: 0 10px 28px rgba(48, 37, 57, 0.08);
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+  user-select: none;
+  border: 1px solid rgba(181, 139, 100, 0.2);
+}
+.vc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(48, 37, 57, 0.16);
+}
+.vc-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  background: #2b2531;
+}
+.vc-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(48, 37, 57, 0.78);
+  backdrop-filter: blur(8px);
+  color: #fffcf8;
+  font: 700 10px/1 'Manrope', sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 11px;
+  border-radius: 20px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+.vc-play-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 252, 248, 0.94);
+  border: 0;
+  display: grid;
+  place-items: center;
+  color: var(--plum);
+  font-size: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events: none;
+}
+.vc-play-icon {
+  margin-left: 3px;
+  line-height: 1;
+}
+.vc-card.is-playing .vc-play-btn {
+  opacity: 0;
+  transform: scale(0.8);
+}
+.vc-card.is-playing:hover .vc-play-btn {
+  opacity: 0.85;
+  transform: scale(1);
+}
+.vc-card.is-playing .vc-play-icon {
+  margin-left: 0;
+}
+.vc-card.is-playing .vc-play-icon::before {
+  content: "❚❚";
+  font-size: 14px;
+}
+.vc-card.is-playing .vc-play-icon span {
+  display: none;
+}
+@media (max-width: 640px) {
+  .vc-section {
+    padding: 38px 0 44px;
+  }
+  .vc-card {
+    flex: 0 0 165px;
+    width: 165px;
+    border-radius: 14px;
+  }
+  .vc-play-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+}
