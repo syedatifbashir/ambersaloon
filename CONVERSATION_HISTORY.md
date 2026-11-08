@@ -205,3 +205,11 @@
 3. **Strategy B (Click-to-Play Facade / Modal)**:
    - Display video thumbnail with an Instagram play badge.
    - When clicked, open a modal with the video or load the embed on demand, keeping initial page load 100% lightweight.
+
+---
+
+### User Request 12:
+> *"if i give it to you than can you upload it and sav eit as well"*
+
+#### Response & Capabilities Confirmed:
+- Confirmed full capability to receive video files or download links, organize them in `assets/videos/`, generate/link cover thumbnails, integrate them into `index.html` with responsive reels UI and lazy autoplay, and commit/push directly to GitHub for automatic Vercel deployment.
