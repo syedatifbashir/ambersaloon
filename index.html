@@ -199,6 +199,7 @@
   <!-- Stylesheets -->
   <link href="assets/styles.css" rel="stylesheet" />
   <link href="assets/refined.css" rel="stylesheet" />
+  <link href="assets/video-carousel.css" rel="stylesheet" />
 </head>
 
 <body data-page="home"><a class="skip" href="#main">Skip to content</a>
@@ -252,6 +253,229 @@
           academy</span><i>✦</i> <span>Hair artistry</span><i>✦</i><span>Bridal beauty</span><i>✦</i><span>Skincare
           rituals</span><i>✦</i><span>Nails &amp; details</span><i>✦</i><span>Beauty academy</span><i>✦</i></div>
     </div>
+    <!-- Video Carousel Section (Directly Above Section 1) -->
+    <section class="vc-section" id="video-carousel" aria-label="Client Video Reviews &amp; Highlights">
+      <div class="vc-container">
+        <div class="vc-header">
+          <div class="vc-header-text">
+            <span class="vc-eyebrow">Client Reviews &amp; Highlights · Instagram</span>
+            <h2 class="vc-title">Stories from our <em>cherished clients.</em></h2>
+            <p class="vc-subtitle">Watch authentic client reviews, bridal transformations, and salon moments directly from our Instagram highlights.</p>
+          </div>
+          <div class="vc-controls">
+            <button class="vc-arrow-btn" id="vcPrev" type="button" aria-label="Previous videos">←</button>
+            <button class="vc-arrow-btn" id="vcNext" type="button" aria-label="Next videos">→</button>
+          </div>
+        </div>
+
+        <div class="vc-viewport">
+          <div class="vc-track">
+            <!-- Video 1 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 1: Client Transformation">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-01-poster.jpg" muted playsinline loop preload="metadata">
+                  <source src="assets/videos/review-01.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 01</small>Client Transformation</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 2 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 2: Hair Artistry &amp; Styling">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-02-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-02.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 02</small>Hair Artistry &amp; Styling</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 3 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 3: Bridal Glow &amp; Artistry">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-03-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-03.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 03</small>Bridal Glow &amp; Artistry</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 4 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 4: Hydra Skin Treatment">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-04-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-04.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 04</small>Hydra Skin Treatment</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 5 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 5: Party Makeup Look">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-05-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-05.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 05</small>Party Makeup Look</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 6 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 6: Hair Colour &amp; Balayage">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-06-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-06.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 06</small>Hair Colour &amp; Balayage</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 7 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 7: Nails &amp; Hand Care">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-07-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-07.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 07</small>Nails &amp; Hand Care</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 8 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 8: Salon Lounge &amp; Vibe">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-08-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-08.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 08</small>Salon Lounge &amp; Vibe</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 9 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 9: Signature Experience">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-09-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-09.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 09</small>Signature Experience</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Video 10 -->
+            <article class="vc-card" tabindex="0" role="group" aria-label="Video 10: Complete Makeover">
+              <div class="vc-media-wrap">
+                <div class="vc-badge-top">
+                  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Client Love
+                </div>
+                <video class="vc-video" poster="assets/videos/review-10-poster.jpg" muted playsinline loop preload="none">
+                  <source src="assets/videos/review-10.mp4" type="video/mp4" />
+                </video>
+                <div class="vc-play-overlay">
+                  <div class="vc-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </div>
+                <div class="vc-bottom-bar">
+                  <div class="vc-caption"><small>Review 10</small>Complete Makeover</div>
+                  <button class="vc-mute-btn" type="button" aria-label="Toggle sound">🔇</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="vc-dots" id="vcDots" role="tablist" aria-label="Video carousel pagination"></div>
+      </div>
+    </section>
     <section class="section" id="services">
       <div class="container">
         <div class="section-head">
@@ -681,6 +905,7 @@
   </div>
   <div class="share-note" hidden="" id="shareToast" role="status"></div>
   <script defer="" src="assets/site.js"></script>
+  <script defer="" src="assets/video-carousel.js"></script>
 </body>
 
 </html>

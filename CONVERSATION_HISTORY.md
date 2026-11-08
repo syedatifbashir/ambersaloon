@@ -273,3 +273,36 @@
 - Confirmed that the site is in its clean, stable production state with no video carousel and no design changes.
 - Maintained all SEO, Google Search Console verification, Meta Pixel tracking, clean URL routing, security headers, and original design intact.
 - Committed and pushed confirmation to `origin/main` on GitHub to ensure Vercel production remains clean and stable.
+
+
+---
+
+### User Request 22:
+> *"TASK: Add ONE new "Video Carousel" section to my existing website, placed directly ABOVE the section I call "Section 1". Do not change anything else. ... pick the videos from the assetes video folder adn also generate teh thumbnail according to the video properly and optimized one. add these videos before teh 01 section properly with direct adbn wuickly video shows properly"*
+
+#### Implementation & Audit:
+1. **Step 0 Architectural Inspection**:
+   - **Framework / Stack**: Static HTML5, vanilla CSS, vanilla JavaScript, deployed on Vercel (`vercel.json`).
+   - **Homepage File**: `index.html`.
+   - **Identified "Section 1"**: `<section class="section" id="services">` with eyebrow `01 / Explore the salon` and heading `Beauty in every detail.`.
+   - **Design Tokens**: Black & Gold luxury palette:
+     - Gold: `#b58b64`, `#d6af8a`, `rgba(181, 139, 100, 0.28)`
+     - Dark / Plum: `#302539`, `#2a1f30`, `#221827`
+     - Backgrounds: `#fffcf8` to `#f7f1f3`
+     - Typography: `'Playfair Display'` (headings), `'Manrope'` (eyebrow, badges), `'DM Sans'` (captions, body).
+     - Radius: `16px`.
+2. **Thumbnail Generation**:
+   - Extracted crisp, native HD video cover thumbnails directly from each of the 10 videos in `assets/videos/`: `review-01-poster.jpg` through `review-10-poster.jpg` (31 KB to 201 KB).
+   - Ensured zero empty or black boxes on page load.
+3. **Scoped CSS (`assets/video-carousel.css`)**:
+   - All classes strictly prefixed with `vc-`.
+   - Responsive layout: 3 cards on desktop (`>1024px`), 2 cards on tablet (`680px - 1023px`), 1 card with peek on mobile (`<680px`).
+   - Dark cards with gold borders, gold play icon overlay, audio toggle, dot navigation, smooth CSS scroll snap, and `prefers-reduced-motion` support.
+4. **Scoped JS (`assets/video-carousel.js`)**:
+   - Vanilla JS without any external libraries.
+   - `IntersectionObserver` handles viewport detection: pauses out-of-view videos and loads metadata on scroll.
+   - Only 1 video plays at a time; clicking any card pauses others.
+   - Dynamic dot indicators synchronized with horizontal scroll.
+5. **Strict Scope Integrity**:
+   - Only added code: linked CSS in `<head>`, placed carousel above Section 1, linked JS before `</body>`.
+   - Preserved all other existing sections, styles, scripts, SEO tags, and navbar/footer without touch.
