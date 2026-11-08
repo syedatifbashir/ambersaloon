@@ -12,4 +12,3 @@ Recommended file names:
 
 Performance note:
 Videos placed here are served directly through Vercel's Edge CDN with high-speed caching (Cache-Control: 1 year, immutable) and instant lazy-load streaming.
-
