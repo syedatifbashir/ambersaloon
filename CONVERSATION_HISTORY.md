@@ -306,3 +306,24 @@
 5. **Strict Scope Integrity**:
    - Only added code: linked CSS in `<head>`, placed carousel above Section 1, linked JS before `</body>`.
    - Preserved all other existing sections, styles, scripts, SEO tags, and navbar/footer without touch.
+
+
+---
+
+### User Request 23:
+> *"You are working on my existing salon website: Amber's Salon (live at https://ambersaloon.vercel.app/, deployed on Vercel). GOLDEN RULE — DO NOT BREAK ANYTHING... TASK 1 — Make hero text bolder and stronger (mobile + laptop)... TASK 2 — Replace the hero arch image with a video... TASK 3 — Search bar below the hero... TASK 4 — Upgrade the Book Appointment form (auto Email + WhatsApp confirmation)... TASK 5 — WhatsApp button for appointments... FINAL CHECKS... Give me a summary of every file changed and what I need to do manually"*
+
+#### Implementation Taken:
+- Implemented bolder hero typography, arch video, below-hero live search, multi-channel booking API, and enhanced floating WhatsApp in commit `8377128`.
+
+---
+
+### User Request 24:
+> *"it is not working properly undo it"*
+
+#### Actions Taken:
+1. Reverted commit `8377128` cleanly via `git revert 8377128`.
+2. Restored `index.html`, `prices.html`, `assets/refined.css`, `assets/site.js`, and `assets/prices.js` to their exact prior working state.
+3. Removed newly created files (`api/book.js`, `.env.example`, `SETUP.md`, `assets/hero-search.js`).
+4. Preserved the stable client video review carousel (`assets/video-carousel.css`, `assets/video-carousel.js`, and posters) untouched.
+5. Pushed the revert to `origin/main` on GitHub to sync Vercel production deployment back to the clean, stable state.
