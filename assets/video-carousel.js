@@ -64,7 +64,7 @@
         }
         video.play().then(() => {
           card.classList.add('vc-playing');
-        }).catch(() => { });
+        }).catch(() => {});
       } else {
         video.pause();
         card.classList.remove('vc-playing');
@@ -92,7 +92,7 @@
           video.preload = 'metadata';
           video.load();
         }
-        video.play().then(() => card.classList.add('vc-playing')).catch(() => { });
+        video.play().then(() => card.classList.add('vc-playing')).catch(() => {});
       }
     });
 

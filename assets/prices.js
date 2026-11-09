@@ -78,16 +78,4 @@
   if(category && [...filter.options].some(x=>x.value===category))filter.value=category;
   if(q)search.value=q;
   render();
-  if (q || category) {
-    setTimeout(() => {
-      const firstRow = catalog.querySelector('.price-row');
-      if (firstRow) {
-        firstRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        firstRow.classList.add('price-highlight-flash');
-      } else {
-        const catStart = document.getElementById('catalog-start');
-        catStart?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 200);
-  }
 })();

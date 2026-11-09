@@ -193,8 +193,8 @@
   <link rel="dns-prefetch" href="https://www.facebook.com" />
   <link rel="preload" as="image" href="assets/stock/hero.jpg" fetchpriority="high" />
 
-  <!-- Google Fonts (Optimized parallel loading with full luxury weights) -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <!-- Google Fonts (Optimized parallel loading) -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
   <link href="assets/styles.css" rel="stylesheet" />
@@ -236,52 +236,11 @@
         </div>
         <div class="hero-stage">
           <div class="arch-back"></div>
-          <div class="arch-photo">
-            <video class="hero-arch-video" id="heroArchVideo" autoplay muted loop playsinline preload="metadata" poster="assets/stock/hero.jpg">
-              <source src="assets/videos/hero.mp4" type="video/mp4" />
-              <source src="assets/videos/hero.webm" type="video/webm" />
-              <img alt="Hero beauty illustration or licensed editorial stock photograph" class="hero-arch-fallback"
-                data-photo="hero" decoding="async" loading="eager" src="assets/stock/hero.jpg" />
-            </video>
-          </div>
+          <div class="arch-photo"><img alt="Hero beauty illustration or licensed editorial stock photograph" class=""
+              data-photo="hero" decoding="async" loading="eager" src="assets/stock/hero.jpg" /></div>
           <div class="roundstamp">A LITTLE TIME FOR <strong>you</strong> IS EVERYTHING</div>
           <div class="stagecaption">The art of feeling beautiful.</div><span class="marginal">YOUR BEAUTY DESTINATION ·
             LAHORE</span>
-        </div>
-      </div>
-    </section>
-    <!-- Below-Hero Luxury Live Search Strip -->
-    <section class="hero-search-section" id="heroSearchSection" aria-label="Quick Service and Price Search">
-      <div class="container">
-        <div class="hero-search-card">
-          <div class="hero-search-input-shell">
-            <span class="hero-search-icon" aria-hidden="true">⌕</span>
-            <input
-              type="search"
-              id="heroSearchInput"
-              class="hero-search-input"
-              placeholder="Search services, treatments or prices… e.g. Hydra facial, Balayage, Bridal makeup"
-              autocomplete="off"
-              spellcheck="false"
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-controls="heroSearchResults"
-              aria-label="Search services, treatments or prices"
-            />
-            <button type="button" id="heroSearchClear" class="hero-search-clear" aria-label="Clear search" hidden>×</button>
-            <a href="/prices" class="hero-search-browse-btn" id="heroSearchBrowseAll">Search Menu ↗</a>
-          </div>
-          <!-- Live results dropdown -->
-          <div class="hero-search-results" id="heroSearchResults" role="listbox" hidden></div>
-          <div class="hero-search-quick-tags">
-            <span class="quick-label">Popular:</span>
-            <button type="button" class="quick-tag" data-tag="Hydra Facial">Hydra Facial</button>
-            <button type="button" class="quick-tag" data-tag="Balayage">Balayage</button>
-            <button type="button" class="quick-tag" data-tag="Bridal Makeup">Bridal Makeup</button>
-            <button type="button" class="quick-tag" data-tag="Gel Nails">Gel Nails</button>
-            <button type="button" class="quick-tag" data-tag="Signature Glow">Signature Glow</button>
-            <button type="button" class="quick-tag" data-tag="Hair Cut">Hair Cut</button>
-          </div>
         </div>
       </div>
     </section>
@@ -846,7 +805,8 @@
         <h2 class="serif">Frequently <em>asked.</em></h2>
         <details class="faqitem">
           <summary>How do I book an appointment?</summary>
-          <p>Click "Book appointment" to select your preferred treatment, date, and time. You will receive an instant email and WhatsApp booking summary, and our salon team in DHA Phase 6, Lahore will confirm your slot. You can also contact us directly on WhatsApp at 0301-4398287.</p>
+          <p>Use the Book Appointment button or call 0301-4398287. The online form opens WhatsApp with your requested
+            date, time and service. The team confirms availability.</p>
         </details>
         <details class="faqitem">
           <summary>Where is Amber's Salon located?</summary>
@@ -906,148 +866,45 @@
       <div class="bottom"><span>© <span id="year"></span> Amber's Salon. All rights reserved.</span><span>Crafted for
           your beauty moments in Lahore.</span></div>
     </div>
-  </footer><a aria-label="Message Amber's Salon on WhatsApp" class="floatwa" href="https://wa.me/923014398287?text=Hi%20Amber%27s%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment."
-    rel="noopener noreferrer" target="_blank" title="Book on WhatsApp"><span class="floatwa-tooltip">Book on WhatsApp</span><span class="floatwa-icon" aria-hidden="true">✆</span></a>
+  </footer><a aria-label="Message Amber's Salon on WhatsApp" class="floatwa" href="https://wa.me/923014398287"
+    rel="noopener noreferrer" target="_blank" title="Book on WhatsApp">✆</a>
   <div aria-labelledby="bookingTitle" aria-modal="true" class="modal" hidden="" id="bookingModal" role="dialog">
     <div class="modal-content"><button aria-label="Close appointment form" class="modal-close" id="closeModal"
-        type="button">×</button>
-      
-      <!-- Primary Booking Form Container -->
-      <div id="bookingFormContainer">
-        <span class="eyebrow">Your beauty appointment</span>
-        <h2 id="bookingTitle">Book a visit</h2>
-        <p>Reserve your tailored beauty experience. You'll receive instant confirmations via Email &amp; WhatsApp.</p>
-        
-        <form id="bookingForm" novalidate>
-          <!-- Honeypot anti-spam field (hidden from genuine users) -->
-          <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
-            <input type="text" name="website_url_hp" id="bWebsiteHp" tabindex="-1" autocomplete="off" />
-          </div>
-
-          <!-- Service Category & Specific Service (Dynamic from price data) -->
-          <div class="field">
-            <label for="bCategory">Service category <span class="req">*</span></label>
-            <select class="select" id="bCategory" name="category" required>
-              <option value="">Select category…</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="bService">Specific service <span class="req">*</span></label>
-            <select class="select" id="bService" name="service" required>
-              <option value="">Choose service &amp; price…</option>
-            </select>
-          </div>
-
-          <!-- Full Name -->
-          <div class="field">
-            <label for="bName">Full name <span class="req">*</span></label>
-            <input class="input" id="bName" maxlength="100" name="name" placeholder="e.g. Ayesha Khan" required autocomplete="name" />
-          </div>
-
-          <!-- Phone (Pakistan format) & Email side-by-side -->
-          <div class="modal-grid-2">
-            <div class="field">
-              <label for="bPhone">Phone / WhatsApp <span class="req">*</span></label>
-              <input class="input" id="bPhone" name="phone" type="tel" placeholder="03XX-XXXXXXX" required autocomplete="tel" />
-              <small class="field-hint">Pakistan mobile (e.g. 0301-4398287)</small>
-            </div>
-            <div class="field">
-              <label for="bEmail">Email address <span class="req">*</span></label>
-              <input class="input" id="bEmail" name="email" type="email" placeholder="name@example.com" required autocomplete="email" />
-              <small class="field-hint">Booking receipt will be sent here</small>
-            </div>
-          </div>
-
-          <!-- Preferred Date, Time & Number of People -->
-          <div class="modal-grid-3">
-            <div class="field">
-              <label for="bDate">Preferred date <span class="req">*</span></label>
-              <input class="input" id="bDate" name="date" required type="date" />
-            </div>
-            <div class="field">
-              <label for="bTime">Preferred time <span class="req">*</span></label>
-              <select class="select" id="bTime" name="time" required>
-                <option value="">Select time</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="1:00 PM">1:00 PM</option>
-                <option value="2:00 PM">2:00 PM</option>
-                <option value="3:00 PM">3:00 PM</option>
-                <option value="4:00 PM">4:00 PM</option>
-                <option value="5:00 PM">5:00 PM</option>
-                <option value="6:00 PM">6:00 PM</option>
-                <option value="7:00 PM">7:00 PM</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="bGuests">Guests</label>
-              <select class="select" id="bGuests" name="guests">
-                <option value="1">1 Person</option>
-                <option value="2">2 People</option>
-                <option value="3">3 People</option>
-                <option value="4+">4+ Group / Bridal</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Special requests / notes -->
-          <div class="field">
-            <label for="bNote">Special requests / notes (optional)</label>
-            <textarea class="textarea" id="bNote" name="notes" maxlength="350" placeholder="Treatment preferences, allergies, or questions…"></textarea>
-          </div>
-
-          <!-- Consent Checkbox -->
-          <div class="field-checkbox">
-            <label class="checkbox-label" for="bConsent">
-              <input type="checkbox" id="bConsent" name="consent" required checked />
-              <span>I agree to receive booking updates on WhatsApp and email.</span>
-            </label>
-          </div>
-
-          <!-- Inline error alert -->
-          <div class="booking-alert" id="bookingAlert" role="alert" hidden></div>
-
-          <!-- Submit Button with loading state -->
-          <button class="btn dark booking-submit-btn" id="bSubmitBtn" type="submit">
-            <span class="btn-text">Confirm &amp; Request Appointment ↗</span>
-            <span class="btn-spinner" hidden aria-hidden="true"><span class="spinner-dot"></span> Processing booking…</span>
-          </button>
-
-          <!-- Secondary direct WhatsApp option -->
-          <div class="modal-secondary-opt">
-            <a class="linkline secondary-wa-link" href="https://wa.me/923014398287?text=Hi%20Amber%27s%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." rel="noopener noreferrer" target="_blank" id="modalDirectWaLink">Prefer WhatsApp? Book directly on WhatsApp ↗</a>
-          </div>
-
-          <p class="micro">No payment takes place on this website. Final availability and appointment slots are confirmed directly by the salon team.</p>
-        </form>
-      </div>
-
-      <!-- Success State Container (Revealed after successful booking) -->
-      <div id="bookingSuccessContainer" class="booking-success-view" hidden>
-        <div class="success-icon-badge">✓</div>
-        <span class="eyebrow">Booking request received</span>
-        <h2 class="serif">Thank you, <span id="successName"></span>!</h2>
-        <p class="success-lead">Your appointment request has been recorded. We've sent a detailed confirmation to <strong id="successEmail"></strong> and notified our salon concierge.</p>
-        
-        <div class="success-summary-box">
-          <div class="summary-line"><span>Service:</span><strong id="successService">—</strong></div>
-          <div class="summary-line"><span>Date &amp; Time:</span><strong id="successDateTime">—</strong></div>
-          <div class="summary-line"><span>Salon Location:</span><span>CCA-109, DHA Phase 6, Lahore</span></div>
-          <div class="summary-line"><span>Salon Contact:</span><a href="tel:+923014398287">0301-4398287</a></div>
+        type="button">×</button><span class="eyebrow">Your beauty appointment</span>
+      <h2 id="bookingTitle">Book a visit</h2>
+      <p>Complete the details below to open a pre-filled appointment request in WhatsApp. Booking is confirmed only by
+        the salon.</p>
+      <form id="bookingForm">
+        <div class="field"><label for="bService">Service</label><input class="input" id="bService" maxlength="150"
+            name="service" required="" /></div>
+        <div class="field"><label for="bName">Name</label><input class="input" id="bName" maxlength="100" name="name"
+            placeholder="Your name" required="" /></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="field"><label for="bDate">Preferred date</label><input class="input" id="bDate" name="date"
+              required="" type="date" /></div>
+          <div class="field"><label for="bTime">Preferred time</label><select class="select" id="bTime" name="time"
+              required="">
+              <option value="">Select time</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+            </select></div>
         </div>
-
-        <div class="success-actions">
-          <a class="btn dark" id="successWaBtn" href="https://wa.me/923014398287" target="_blank" rel="noopener noreferrer">Open WhatsApp Summary ↗</a>
-          <button type="button" class="btn outline" id="successCloseBtn">Done</button>
-        </div>
-      </div>
+        <div class="field"><label for="bNote">Notes (optional)</label><textarea class="textarea" id="bNote"
+            maxlength="350" placeholder="Any treatment preferences or questions..."></textarea></div><button
+          class="btn dark" type="submit">Continue to WhatsApp ↗</button>
+        <p class="micro">No payment or booking confirmation takes place on this website.</p>
+      </form>
     </div>
   </div>
   <div class="share-note" hidden="" id="shareToast" role="status"></div>
-  <script defer="" src="assets/prices-data.js"></script>
   <script defer="" src="assets/site.js"></script>
-  <script defer="" src="assets/hero-search.js"></script>
   <script defer="" src="assets/video-carousel.js"></script>
 </body>
 
